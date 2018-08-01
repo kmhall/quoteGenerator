@@ -4,9 +4,23 @@ Quote Generator
 
 ## Getting Started
 
-To get the quote generator to a fully functioning state, it must be uploaded to Showpad as an experinece app. 
+There are two ways too see the project fully working:
 
-Showpad SDK Documentation: https://kmhall.github.io/resume/projects/documentationExample/index.html
+Follow the Showpad SDK Documentation for setup directions: https://kmhall.github.io/resume/projects/documentationExample/index.html
+
+
+1.Uploaded the file "a.3.0.5.showpad" as an experience app through showpad
+
+2.Add a ".showpadconfig.json" file to the src folder containing your credentials:
+
+
+{
+    "host": "",
+    "client_id": "",
+    "client_secret": "",
+    "username": "",
+    "password": ""
+}
 
 ### Working Condition
 
