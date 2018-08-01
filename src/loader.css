@@ -1,0 +1,137 @@
+.loader.active {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+    position: fixed;
+    top: 40%;
+    left: 43%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    z-index: 4;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loadBox.active{
+    box-shadow: 0px 10px 16px rgba(0,0,0,.6);
+    background-color: grey;
+    width: 400px;
+    height: 180px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    border-radius: 12px;
+
+
+}
+
+.loadText.active{
+    color: white;
+    position: fixed;
+    top: 56%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    font-size: 24pt;
+    font-weight: 600;
+    display: inline;
+
+}
+
+.loadText{
+    display: none;
+}
+
+
+/* Check Mark Styling*/
+.center{
+    position: fixed;
+    top: 46%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    margin :none;
+}
+
+
+.check svg {
+    width: 100px;
+    display: none;
+  }
+
+  
+  .check.path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+  }
+  .check.circle {
+      -webkit-animation: dash .9s ease-in-out;
+      animation: dash .9s ease-in-out;
+    }
+    .check.line {
+      stroke-dashoffset: 1000;
+      -webkit-animation: dash .9s .35s ease-in-out forwards;
+      animation: dash .9s .35s ease-in-out forwards;
+    }
+    .check .check {
+      stroke-dashoffset: -100;
+      -webkit-animation: dash-check .9s .35s ease-in-out forwards;
+      animation: dash-check .9s .35s ease-in-out forwards;
+    }
+  
+  
+    .checkp {
+    text-align: center;
+    margin: 20px 0 60px;
+    font-size: 1.25em;
+      color: white;
+  }
+  
+  
+  @-webkit-keyframes dash {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @-webkit-keyframes dash-check {
+    0% {
+      stroke-dashoffset: -100;
+    }
+    100% {
+      stroke-dashoffset: 900;
+    }
+  }
+  
+  @keyframes dash-check {
+    0% {
+      stroke-dashoffset: -100;
+    }
+    100% {
+      stroke-dashoffset: 900;
+    }
+  }
+  

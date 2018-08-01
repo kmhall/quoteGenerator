@@ -1,0 +1,246 @@
+@import url(reset.css);
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    font-size: 67.5%;
+    min-height: 100%;
+}
+
+body {
+    background:white;
+    font-size: 1.8rem;
+    min-height: 100%;
+}
+
+.wrapper {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+button {
+    background: #7A7A7A;
+    border: 2px solid #7A7A7A;
+    color: rgba(255, 255, 255, .8);
+    padding: 8px 24px;
+    border-radius: 8px;
+    margin-top: 32px;
+    font-weight: 300;
+    transition: .2s ease-in-out;
+}
+
+button.active {
+    background: #005DE8;
+    border-color: #005DE8;
+    color: white;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+button.active:hover {
+    border-radius: 12px;
+    transform: translateY(-8px);
+    transition: .2s ease-in-out;
+}
+
+.color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: " ";
+    background: #005DE8;
+    height: 4px;
+    width: 100%;
+}
+
+#colorOverlay.active {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100ch;
+    background: rgba(0, 0, 0, .8);
+}
+
+fieldset {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-top: 48px;
+}
+
+.form-item {
+    margin: 24px 0;
+}
+
+form img {
+    max-width: 100%;
+    margin: 24px 0;
+    display: none;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 3.6rem;
+}
+
+h3 {
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin-bottom: 4px;
+}
+
+.past-quotes ul {
+    margin-top: 32px;
+}
+
+.past-quotes li {
+    border: 1px solid #EDEFF2;
+    padding: 14px 24px 16px;
+    border-radius: 16px;
+    transition: .2s ease-in-out;
+}
+
+.past-quotes li:hover {
+    transform: translateY(-4px);
+    background: #EDEFF2;
+    cursor: pointer;
+}
+
+.quoteGenerator {
+    margin-top: 40px;
+}
+
+#quoteGoesHere.active {
+    position: absolute;
+    max-width: 677px;
+    max-height: 760px;
+    top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#quoteGoesHere button {
+    display: none;
+}
+
+#quoteGoesHere button.active {
+    display: inline;
+    position: absolute;
+    bottom: -64px;
+    right: 0;
+    background: #005DE8;
+    color: white;
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+#quoteGoesHere button:hover {
+    border-radius: 12px;
+    transform: translateY(-8px);
+    transition: .2s ease-in-out;
+}
+
+#quoteGoesHere button#edit, #back, #addProduct {
+    left: 0;
+    border: 2px solid white;
+    background: transparent;
+}
+#addProduct{
+    border-color: #005DE8;
+    color: #005DE8;
+    font-weight: 500;
+    margin-right: 12px;
+}
+
+label {
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: #005DE8;
+}
+
+select, input {
+    margin-top: 8px;
+    border: none;
+    background: #EDEFF2;
+    height: 40px;
+    width: 50%;
+    min-width: 300px;
+    display: block;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.optional {
+    font-style: italic;
+    color: #7A7A7A;
+}
+
+input {
+    padding: 0 8px;
+}
+
+input.number {
+    width: 15%;
+    min-width: 100px;
+    cursor: auto;
+}
+
+@media all and (max-width:700px) {
+    #quoteGoesHere.active {
+        transform: scale(.75);
+    }
+
+    iframe {
+        width: 100% !important;
+    }
+}
+
+/* Styles to display modal to add a product */
+.loadBox{
+    align-content: center;
+    display: none;
+    box-shadow: 0px 10px 16px rgba(0,0,0,.6);
+    background-color: white;
+    width: 400px;
+    height: 300px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    border-radius: 12px;
+    padding:none;
+    
+}
+
+.loadBox fieldset{
+    margin-top: 24px;
+    display: block;
+    margin: 1.0em auto;
+    text-align: center;
+}
+
+.loadBox label{
+    margin-left: 40px;
+}
+
+.loadBox input{
+    margin-left: 40px;
+
+}
+
+
+#pushProduct {
+    position: absolute;
+    right: 0px;
+}
+
+

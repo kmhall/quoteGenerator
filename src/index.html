@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Components</title>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script src = "firebase.js"></script>
+    <link rel="stylesheet" href="tachyons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="sans-serif">
+    <div class="wrapper">
+        <span class="color"></span>
+        <div class="quoteGenerator">
+            <section>
+                <h1>Create New Quote</h1>
+
+                <form>
+                    <fieldset>Product Selection</fieldset>
+
+                    <div class="form-item">
+                        <label>Item</label>
+                        <select id = "product-names">
+                            <option>Select an Item</option>
+                        </select>
+                    </div>
+                    <div class="form-item">
+                        <label>Unit Price</label>
+                        <input id = "product-price"class="number" type="text" readonly placeholder="">
+                    </div>
+                    <fieldset>Quote Parameters</fieldset>
+                    <div class="form-item">
+                        <label>Quantity</label>
+                        <input id ="quantity" autocomplete = "off" class="number" type="number" name="quantity" min="1" placeholder="0">
+                    </div>
+                    <div class="form-item">
+                        <label>Shipping Location</label>
+                        <select id = "location-names">
+                            <option>Select a Location</option>
+                        </select>
+                    </div>
+                    <div class="form-item">
+                        <label>Insurance Plan</label>
+                        <select id = "insurance-names">
+                            <option>Select a Plan</option>
+                        </select>
+                    </div>
+                    <div class="form-item">
+                        <label>Adjusted Price <span class="optional">- Optional</span></label>
+                        <input id ="adj-price"class="number" type="text" placeholder="$0.00">
+                    </div>
+                </form>
+            </section>
+        </div>
+        <!--Active class for this stuff -->
+        <button onclick = "addProduct()" id = "addProduct" class = "active">Add a New Product</button>
+
+        <button id = "getQuote">Get Quote</button>
+
+        <div id="quoteGoesHere">
+            <button onclick = "removeModal()" id="edit">Edit Quote</button>
+            <button onclick = "submitPDF()" id="submit">Upload Quote</button>
+        </div>
+    </div>
+    <div id="colorOverlay"></div>
+
+</body>
+<!-- Modal that is displayed and placed absolute -->
+<div class="loadBox ">
+    <div id = "hide-on-click">
+        <fieldset>Add a New Product</fieldset>
+    <div class="form-item">
+        <label>Item</label>
+        <input type="text" id = "productName" name="productName" value="">
+    </div>
+    <div class="form-item">
+        <label>Unit Price</label>
+        <input type="text" id = "productPrice" name="productPrice" value="">
+    </div>
+</div>
+    <button onclick = "back()" class = "active"id="back">Back</button>
+    <button onclick = "pushProduct()" id="pushProduct">Add Product</button>
+</div>
+
+<script src = "app.js"></script>
+</html>

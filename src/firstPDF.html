@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="firstpdf.css">
+    <link rel="stylesheet" href="loader.css">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+
+<body id="capture">
+    <h1>Sales Quote</h1>
+    <div class="meta">
+        <ul>
+            <li>Quote Created:
+                <span id="quoteCreated">00.00.0000</span>
+            </li>
+            <li>Quote Expires:
+                <span id="quoteExpires">00.00.0000</span>
+            </li>
+            <li>Quote Number:
+                <span id="quoteNumber">0000</span>
+            </li>
+        </ul>
+    </div>
+    <span class="divider"></span>
+    <div class="product">
+        <p class="productName">productName</p>
+        <ul class="productMeta">
+            <li>From:
+                <span id="from">XXXXXX, XX, XXX</span>
+            </li>
+            <li>To:
+                <span id="to">XXXXXX, XX, XXX</span>
+            </li>
+            <li>Insurance Plan:
+                <span id="insurance">XXXX</span>
+            </li>
+        </ul>
+        <ul class="price">
+            <li>Base Price:
+                <span id="basePrice">000.00</span>
+            </li>
+            <li>Adjusted Price:
+                <span id="adjustedPrice">N/A</span>
+            </li>
+        </ul>
+        <p class="quantity">Quantity:
+            <span id="quantity">00</span>
+        </p>
+    </div>
+    <span class="divider"></span>
+    <h2>Grand Total:
+        <span id="grandTotal">000.00</span>
+    </h2>
+
+</body>
+<!-- Remove active -->
+<div class="loader "></div>
+<div class="loadBox "></div>
+<div class="loadText ">Uploading to myFiles</div>
+<div class="center check">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+        <circle class="path circle" fill="none" stroke="#ffffff" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
+        <polyline class="path check" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10"
+            points="100.2,40.2 51.5,88.8 29.8,67.5 " />
+    </svg>
+    <!-- <p class="success">Oh Yeah!</p> -->
+</div>
+
+
+
+
+<script src="html2canvas.min.js"></script>
+<script src="jspdf.min.js"></script>
+<script src="firstPDF.js"></script>
+
+</html>
